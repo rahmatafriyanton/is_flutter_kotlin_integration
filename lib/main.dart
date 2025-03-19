@@ -11,7 +11,7 @@ Future<void> _setUserID() async {
   const platform = MethodChannel('com.example.myapp/channel');
   try {
     final String result = await platform
-        .invokeMethod('setIronSkyUserID', {'userID': 'user_id_flutter_kotlin'});
+        .invokeMethod('setIronSkyUserID', {'userID': 'flutter_kotlin_swift'});
     print('Result from Kotlin: $result');
   } on PlatformException catch (e) {
     print("Failed to set user ID: '${e.message}'.");
